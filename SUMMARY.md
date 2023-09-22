@@ -11,7 +11,6 @@
     * [第2节：布局优化](Chapter2/layout.md)
     * [第3节：离屏渲染优化](Chapter2/offscreen.md)
     * [第4节：图片优化](Chapter2/image.md)
-    * [第5节：文本渲染优化](Chapter2/text.md)
-    * [第6节：绘制边界优化](Chapter2/repaintBoundary.md)
-    * [第7节：分帧渲染优化](Chapter2/frame_seprate.md)
+    * [第5节：绘制边界优化](Chapter2/repaintBoundary.md)
+    * [第6节：分帧渲染优化](Chapter2/frame_seprate.md)
 

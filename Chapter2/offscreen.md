@@ -67,7 +67,7 @@ class _State extends State<StatefulWidget> {
           ),
         );
       },
-      itemCount: 50, // 总共有100个方格
+      itemCount: 50, // 总共有50个方格
     );
   }
 }

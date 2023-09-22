@@ -8,5 +8,5 @@ widget 重建由于只是对需求的描述，如果其不会引起element重建
 
 ![widget重建次数追踪](assets/image-20230922183918065.png)
 
-##### 1. 能够合法地被const 修饰的widget构造函数的调用生成的widget对象不会被重建。例如const SizedBox。
+##### 1. 能够合法地被const 修饰的widget构造函数的调用生成的widget对象不会被重建。例如const SizedBox()。
 ##### 2. 对于不能被const修饰的widget构造函数调用生成的widget对象，可以用全局变量或其他不会在某段时间中销毁的变量引用起来，做一个懒加载处理，复用这个widget，避免重建

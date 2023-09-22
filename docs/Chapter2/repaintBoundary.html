@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第1节：三棵树 · GitBook</title>
+        <title>第5节：绘制边界优化 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="repaintBoundary.html" />
     
-    
-    <link rel="prev" href="./" />
+    <link rel="prev" href="text.html" />
     
 
     </head>
@@ -102,9 +100,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../Chapter1/">
             
-                <a href="./">
+                <a href="../Chapter1/">
             
                     
                     第一章 渲染流程
@@ -116,9 +114,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="tree.html">
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/tree.html">
             
-                <a href="tree.html">
+                <a href="../Chapter1/tree.html">
             
                     
                     第1节：三棵树
@@ -129,9 +127,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="repaintBoundary.html">
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/repaintBoundary.html">
             
-                <a href="repaintBoundary.html">
+                <a href="../Chapter1/repaintBoundary.html">
             
                     
                     第2节：绘制边界
@@ -142,9 +140,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="pipeline.html">
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/pipeline.html">
             
-                <a href="pipeline.html">
+                <a href="../Chapter1/pipeline.html">
             
                     
                     第3节：渲染流程
@@ -155,9 +153,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="key.html">
+        <li class="chapter " data-level="1.2.4" data-path="../Chapter1/key.html">
             
-                <a href="key.html">
+                <a href="../Chapter1/key.html">
             
                     
                     第4节：key与复用
@@ -173,9 +171,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../Chapter2/">
+        <li class="chapter " data-level="1.3" data-path="./">
             
-                <a href="../Chapter2/">
+                <a href="./">
             
                     
                     第二章 性能优化
@@ -187,9 +185,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/layout..html">
+        <li class="chapter " data-level="1.3.1" data-path="layout..html">
             
-                <a href="../Chapter2/layout..html">
+                <a href="layout..html">
             
                     
                     第1节：布局优化
@@ -200,9 +198,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/offscreen.html">
+        <li class="chapter " data-level="1.3.2" data-path="offscreen.html">
             
-                <a href="../Chapter2/offscreen.html">
+                <a href="offscreen.html">
             
                     
                     第2节：离屏渲染优化
@@ -213,9 +211,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/image..html">
+        <li class="chapter " data-level="1.3.3" data-path="image..html">
             
-                <a href="../Chapter2/image..html">
+                <a href="image..html">
             
                     
                     第3节：图片优化
@@ -226,9 +224,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="../Chapter2/text.html">
+        <li class="chapter " data-level="1.3.4" data-path="text.html">
             
-                <a href="../Chapter2/text.html">
+                <a href="text.html">
             
                     
                     第4节：文本渲染优化
@@ -239,9 +237,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="../Chapter2/repaintBoundary.html">
+        <li class="chapter active" data-level="1.3.5" data-path="repaintBoundary.html">
             
-                <a href="../Chapter2/repaintBoundary.html">
+                <a href="repaintBoundary.html">
             
                     
                     第5节：绘制边界优化
@@ -287,7 +285,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第1节：三棵树</a>
+        <a href=".." >第5节：绘制边界优化</a>
     </h1>
 </div>
 
@@ -302,9 +300,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7B2C;1&#x8282;&#xFF1A;&#x4E09;&#x68F5;&#x6811;">&#x7B2C;1&#x8282;&#xFF1A;&#x4E09;&#x68F5;&#x6811;</h1>
-<h3 id="widgetelementrenderobject&#x7684;&#x5173;&#x7CFB;&#xFF1F;&#x4ED6;&#x4EEC;&#x662F;&#x5982;&#x4F55;&#x534F;&#x4F5C;&#x7684;&#xFF1F;">Widget\Element\RenderObject&#x7684;&#x5173;&#x7CFB;&#xFF1F;&#x4ED6;&#x4EEC;&#x662F;&#x5982;&#x4F55;&#x534F;&#x4F5C;&#x7684;&#xFF1F;</h3>
-<p><img src="assets/image-20230917081238786.png" alt="&#x4E09;&#x68F5;&#x6811;&#x56FE;&#x7247;&#x7F3A;&#x5931;" title="&#x6E32;&#x67D3;&#x6D41;&#x7A0B;&#x5EFA;&#x7ACB;&#x7684;&#x4E09;&#x68F5;&#x6811;"></p>
+                                <h1 id="&#x7B2C;2&#x8282;&#xFF1A;&#x7ED8;&#x5236;&#x8FB9;&#x754C;">&#x7B2C;2&#x8282;&#xFF1A;&#x7ED8;&#x5236;&#x8FB9;&#x754C;</h1>
 
                                 
                                 </section>
@@ -332,14 +328,10 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 第一章 渲染流程">
+                <a href="text.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第4节：文本渲染优化">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="repaintBoundary.html" class="navigation navigation-next " aria-label="Next page: 第2节：绘制边界">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -348,7 +340,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第1节：三棵树","level":"1.2.1","depth":2,"next":{"title":"第2节：绘制边界","level":"1.2.2","depth":2,"path":"Chapter1/repaintBoundary.md","ref":"Chapter1/repaintBoundary.md","articles":[]},"previous":{"title":"第一章 渲染流程","level":"1.2","depth":1,"path":"Chapter1/README.md","ref":"Chapter1/README.md","articles":[{"title":"第1节：三棵树","level":"1.2.1","depth":2,"path":"Chapter1/tree.md","ref":"Chapter1/tree.md","articles":[]},{"title":"第2节：绘制边界","level":"1.2.2","depth":2,"path":"Chapter1/repaintBoundary.md","ref":"Chapter1/repaintBoundary.md","articles":[]},{"title":"第3节：渲染流程","level":"1.2.3","depth":2,"path":"Chapter1/pipeline.md","ref":"Chapter1/pipeline.md","articles":[]},{"title":"第4节：key与复用","level":"1.2.4","depth":2,"path":"Chapter1/key.md","ref":"Chapter1/key.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter1/tree.md","mtime":"2023-09-22T09:05:14.973Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-22T10:11:32.703Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第5节：绘制边界优化","level":"1.3.5","depth":2,"previous":{"title":"第4节：文本渲染优化","level":"1.3.4","depth":2,"path":"Chapter2/text.md","ref":"Chapter2/text.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter2/repaintBoundary.md","mtime":"2023-09-21T12:20:58.550Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-22T10:11:32.703Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

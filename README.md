@@ -1,9 +1,8 @@
-# Introduction
+# 前言
 
-flutter 问题合集
+这本书记录我在过程中积累的对flutter底层的原理认识的和经验总结。
 
 
-​    
 ​      
 ​        
 ​          
@@ -31,5 +30,5 @@ flutter 问题合集
 
 ​	
 
- <div style="text-align:right">@powered by<a href="https://blog.csdn.net/u012887259/article/details/102425669/">gitbook 3.2.3、node 10.14.1、typroa 1.7.4</a></div>
+ <div style="text-align:right">@powered by &nbsp;&nbsp;<a href="https://blog.csdn.net/u012887259/article/details/102425669/">gitbook 3.2.3、node 10.14.1、typroa 1.7.4</a></div>
 

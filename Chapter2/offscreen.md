@@ -8,8 +8,22 @@
 ### 什么情况下会发生离屏渲染？ 以下情况可能发生离屏渲染：
 
 1. 某个Widget的透明度（alpha）小于1，这需要在一个单独的缓冲区中合成图像，然后再将其合并到屏幕上。
+
 2. 使用了图层效果（如阴影）。
+
 3. 使用了某些混合模式或遮罩。
+
+4. 例：
+
+   Opacity widget 
+
+   ShaderMask
+
+   ColorFilter
+
+   Chip— 当 disabledColorAlpha != 0xff 的时候，会调用 saveLayer()
+
+   Text— 当有 overflowShader 时，会调用saveLayer()
 
 ### 为什么需要离屏渲染？ 
 离屏渲染的目的是允许在屏幕上显示复杂的视觉效果和图形效果，这些效果可能不容易直接在屏幕上绘制。它提供了更灵活的图形处理能力，使得开发者可以创建更丰富的UI体验。

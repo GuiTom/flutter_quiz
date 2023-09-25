@@ -87,11 +87,12 @@ class _State extends State<StatefulWidget> {
 }
 </code></pre>
 </details>
+
 在手机上运行App，并观察火焰图上面的帧率然后将clipBehavior: Clip.antiAliasWithSaveLayer这一行打开，再观察火焰图上的帧率
 
-![61695610761_.pic](assets/61695610761_.pic-5611218.jpg)
+<div style="text-align:center;"><img src="./assets/61695610761_.pic-5611218.jpg" style="display:inline-block;"></img></div>
 
-​							                             图一   离屏渲染出的界面
+​							                  图一   离屏渲染出的界面
 ##### 以下是我在小米Mi6X手机上测得的帧率
 
 ![非离谱渲染测试结果](assets/image-20230922175625316.png)

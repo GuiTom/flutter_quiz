@@ -48,6 +48,16 @@ class MyPainter extends CustomPainter {
 
 ![repaintBoundary](assets/repaintBoundary.jpg)
 
+​											图二 圆形动画的重绘区域
+
 是的，RepaintBoundary组件的作用就是缩小重绘区域，以见效性能消耗。
 
+具体重绘区域规则: 从当前setState的那个statefulWidget对应的RenderObject开始，向上遍历父组件，遇到的第一个RepanintBoundary=ture组件为上界;向下遍历子组件，直到遇到RepanintBoundary=true的组件为下界。重绘区域就是上界与下界之间的RenderObject。如下图:
+
+![重绘区域的上界与下界](assets/j0wror9i08.png)
+图三 重回区域的上界和下界
+
 参考:https://cloud.tencent.com/developer/article/1775842
+
+
+

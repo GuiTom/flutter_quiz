@@ -3,7 +3,6 @@
 * [前言](README.md)
 * [第一章 渲染流程](Chapter1/README.md)
     * [第1节：三棵树](Chapter1/tree.md)
-    * [第2节：绘制边界](Chapter1/repaintBoundary.md)
     * [第3节：渲染流程](Chapter1/pipeline.md)
     * [第4节：key与复用](Chapter1/key.md)
 * [第二章 性能优化](Chapter2/README.md)

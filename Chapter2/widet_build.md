@@ -16,3 +16,5 @@ widget 重建由于只是对需求的描述，如果其不会引起element重建
 
 ##### 4.对于例如listView和gridview这样的列表widget,设置其屏幕外缓存区域cachedExtend属性，将滑出屏幕外的 element和RenderObject有限度地缓存起来，避免不必要的重建
 
+
+

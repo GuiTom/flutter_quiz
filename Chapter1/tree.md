@@ -25,5 +25,5 @@
   }
 ```
 
-或者通过dev tools 里面的performance layer的图标来分析
+或者通过dev tools 里面的performance layer的图层来分析
 

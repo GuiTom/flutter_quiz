@@ -46,7 +46,7 @@ class _State extends State<StatefulWidget> {
   Widget build(BuildContext context) {
     return GridView.builder(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3, // 每行显示10个方格
+        crossAxisCount: 3, // 每行显示3个方格
         crossAxisSpacing: 5.0, // 横向间距为5
         mainAxisSpacing: 5.0, // 纵向间距为5
       ),
@@ -73,16 +73,20 @@ class _State extends State<StatefulWidget> {
 }
 </code></pre>
 </details>
+在手机上运行App，并观察火焰图上面的帧率然后将clipBehavior: Clip.antiAliasWithSaveLayer这一行打开，再观察火焰图上的帧率
 
-在手机上运行App，并观察火焰图上面的帧率
+![61695610761_.pic](assets/61695610761_.pic-5611218.jpg)
 
-然后将clipBehavior: Clip.antiAliasWithSaveLayer这一行打开，再观察火焰图上的帧率
-
+​							                             图一   离屏渲染出的界面
 ##### 以下是我在小米Mi6X手机上测得的帧率
 
 ![非离谱渲染测试结果](assets/image-20230922175625316.png)
 
+​											图二 非离屏渲染的帧率
+
 ![离屏渲染测试结果](assets/image-20230922175802434.png)
+
+​											 图三 离屏渲染的帧率
 
 同时，开启了clipBehavior: Clip.antiAliasWithSaveLayer的区域会被显示为棋盘格，并闪烁，标识是离屏渲染的区域
 

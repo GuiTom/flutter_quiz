@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="repaintBoundary.html" />
+    <link rel="next" href="pipeline.html" />
     
     
     <link rel="prev" href="./" />
@@ -129,20 +129,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="repaintBoundary.html">
-            
-                <a href="repaintBoundary.html">
-            
-                    
-                    第2节：绘制边界
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.3" data-path="pipeline.html">
+        <li class="chapter " data-level="1.2.2" data-path="pipeline.html">
             
                 <a href="pipeline.html">
             
@@ -155,7 +142,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="key.html">
+        <li class="chapter " data-level="1.2.3" data-path="key.html">
             
                 <a href="key.html">
             
@@ -239,25 +226,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="../Chapter2/text.html">
-            
-                <a href="../Chapter2/text.html">
-            
-                    
-                    第5节：文本渲染优化
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.6" data-path="../Chapter2/repaintBoundary.html">
+        <li class="chapter " data-level="1.3.5" data-path="../Chapter2/repaintBoundary.html">
             
                 <a href="../Chapter2/repaintBoundary.html">
             
                     
-                    第6节：绘制边界优化
+                    第5节：绘制边界优化
             
                 </a>
             
@@ -265,12 +239,160 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.7" data-path="../Chapter2/frame_seprate.html">
+        <li class="chapter " data-level="1.3.6" data-path="../Chapter2/frame_seprate.html">
             
                 <a href="../Chapter2/frame_seprate.html">
             
                     
-                    第7节：分帧渲染优化
+                    第6节：分帧渲染优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Chapter3/">
+            
+                <a href="../Chapter3/">
+            
+                    
+                    第三章 线程/isolate/异步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/thread.html">
+            
+                <a href="../Chapter3/thread.html">
+            
+                    
+                    第1节：线程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/async.html">
+            
+                <a href="../Chapter3/async.html">
+            
+                    
+                    第2节：异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Chapter3/">
+            
+                <a href="../Chapter3/">
+            
+                    
+                    第四章 点击与手势
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/hit_test.html">
+            
+                <a href="../Chapter4/hit_test.html">
+            
+                    
+                    第1节：点击测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/gensture_arena.html">
+            
+                <a href="../Chapter4/gensture_arena.html">
+            
+                    
+                    第2节：手势竞争
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter5/">
+            
+                <a href="../Chapter5/">
+            
+                    
+                    第五章 生僻语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/hit_test.html">
+            
+                <a href="../Chapter5/hit_test.html">
+            
+                    
+                    第1节：mixin与abstruct class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/yield.html">
+            
+                <a href="../Chapter5/yield.html">
+            
+                    
+                    第2节：yield
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter5/nul_ safety.html">
+            
+                <a href="../Chapter5/nul_ safety.html">
+            
+                    
+                    第3节: null_safety
             
                 </a>
             
@@ -330,7 +452,7 @@
                                 
                                 <h1 id="&#x7B2C;1&#x8282;&#xFF1A;&#x4E09;&#x68F5;&#x6811;">&#x7B2C;1&#x8282;&#xFF1A;&#x4E09;&#x68F5;&#x6811;</h1>
 <h3 id="widgetelementrenderobject&#x7684;&#x5173;&#x7CFB;&#xFF1F;&#x4ED6;&#x4EEC;&#x662F;&#x5982;&#x4F55;&#x534F;&#x4F5C;&#x7684;&#xFF1F;">Widget\Element\RenderObject&#x7684;&#x5173;&#x7CFB;&#xFF1F;&#x4ED6;&#x4EEC;&#x662F;&#x5982;&#x4F55;&#x534F;&#x4F5C;&#x7684;&#xFF1F;</h3>
-<p><img src="assets/image-20230917081238786.png" alt="&#x4E09;&#x68F5;&#x6811;&#x56FE;&#x7247;" title="&#x6E32;&#x67D3;&#x6D41;&#x7A0B;&#x5EFA;&#x7ACB;&#x7684;&#x4E09;&#x68F5;&#x6811;"></p>
+<p><img src="assets/image-20230917081238786.webp" alt="&#x4E09;&#x68F5;&#x6811;&#x56FE;&#x7247;" title="&#x6E32;&#x67D3;&#x6D41;&#x7A0B;&#x5EFA;&#x7ACB;&#x7684;&#x4E09;&#x68F5;&#x6811;"></p>
 <p>&#x200B;                                                &#x56FE;&#x4E00; flutter&#x7684;&#x4E09;&#x68F5;&#x6811;</p>
 <h5 id="&#x601D;&#x8003;&#xFF1A;&#x5982;&#x679C;&#x60F3;&#x6253;&#x5370;&#x51FA;&#x67D0;&#x4E2A;&#x6307;&#x5B9A;widget&#x4ECE;&#x5F00;&#x59CB;build&#x5230;&#x6E32;&#x67D3;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#x9762;&#x6240;&#x82B1;&#x8D39;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x53EF;&#x80FD;&#x5B9E;&#x73B0;&#x5417;&#xFF1F;">&#x601D;&#x8003;&#xFF1A;&#x5982;&#x679C;&#x60F3;&#x6253;&#x5370;&#x51FA;&#x67D0;&#x4E2A;&#x6307;&#x5B9A;widget&#x4ECE;&#x5F00;&#x59CB;build&#x5230;&#x6E32;&#x67D3;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#x9762;&#x6240;&#x82B1;&#x8D39;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x53EF;&#x80FD;&#x5B9E;&#x73B0;&#x5417;&#xFF1F;</h5>
 <p>&#x7B54;&#x6848;&#x662F;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x6253;&#x5370;&#x51FA;&#xFF0C;&#x56E0;&#x4E3A;&#x8BE5;&#x5404;&#x4E2A;widget&#x7684;&#x6784;&#x5EFA;&#x3001;&#x5E03;&#x5C40;&#x3001;&#x548C;&#x6E32;&#x67D3;&#x662F;&#x76F8;&#x4E92;&#x5E76;&#x5B58;&#x4EA4;&#x53C9;&#x7684;&#x3002; </p>
@@ -346,7 +468,7 @@
     });
   }
 </code></pre>
-<p>&#x6216;&#x8005;&#x901A;&#x8FC7;dev tools &#x91CC;&#x9762;&#x7684;performance layer&#x7684;&#x56FE;&#x6807;&#x6765;&#x5206;&#x6790;</p>
+<p>&#x6216;&#x8005;&#x901A;&#x8FC7;dev tools &#x91CC;&#x9762;&#x7684;performance layer&#x7684;&#x56FE;&#x5C42;&#x6765;&#x5206;&#x6790;</p>
 
                                 
                                 </section>
@@ -379,7 +501,7 @@
                 </a>
                 
                 
-                <a href="repaintBoundary.html" class="navigation navigation-next " aria-label="Next page: 第2节：绘制边界">
+                <a href="pipeline.html" class="navigation navigation-next " aria-label="Next page: 第3节：渲染流程">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -390,7 +512,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第1节：三棵树","level":"1.2.1","depth":2,"next":{"title":"第2节：绘制边界","level":"1.2.2","depth":2,"path":"Chapter1/repaintBoundary.md","ref":"Chapter1/repaintBoundary.md","articles":[]},"previous":{"title":"第一章 渲染流程","level":"1.2","depth":1,"path":"Chapter1/README.md","ref":"Chapter1/README.md","articles":[{"title":"第1节：三棵树","level":"1.2.1","depth":2,"path":"Chapter1/tree.md","ref":"Chapter1/tree.md","articles":[]},{"title":"第2节：绘制边界","level":"1.2.2","depth":2,"path":"Chapter1/repaintBoundary.md","ref":"Chapter1/repaintBoundary.md","articles":[]},{"title":"第3节：渲染流程","level":"1.2.3","depth":2,"path":"Chapter1/pipeline.md","ref":"Chapter1/pipeline.md","articles":[]},{"title":"第4节：key与复用","level":"1.2.4","depth":2,"path":"Chapter1/key.md","ref":"Chapter1/key.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter1/tree.md","mtime":"2023-09-22T14:34:06.394Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-22T14:34:20.444Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第1节：三棵树","level":"1.2.1","depth":2,"next":{"title":"第3节：渲染流程","level":"1.2.2","depth":2,"path":"Chapter1/pipeline.md","ref":"Chapter1/pipeline.md","articles":[]},"previous":{"title":"第一章 渲染流程","level":"1.2","depth":1,"path":"Chapter1/README.md","ref":"Chapter1/README.md","articles":[{"title":"第1节：三棵树","level":"1.2.1","depth":2,"path":"Chapter1/tree.md","ref":"Chapter1/tree.md","articles":[]},{"title":"第3节：渲染流程","level":"1.2.2","depth":2,"path":"Chapter1/pipeline.md","ref":"Chapter1/pipeline.md","articles":[]},{"title":"第4节：key与复用","level":"1.2.3","depth":2,"path":"Chapter1/key.md","ref":"Chapter1/key.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter1/tree.md","mtime":"2023-09-28T02:20:20.424Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-11T06:29:17.019Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -398,6 +520,10 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

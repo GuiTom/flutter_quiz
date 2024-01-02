@@ -20,5 +20,4 @@
     * [第2节：手势竞争](Chapter4/gensture_arena.md)
 * [第五章 生僻语法](Chapter5/README.md)
     * [第1节：yield](Chapter5/yield.md)
-    * [第2节: null_safety](Chapter5/nul_ safety.md)
 

@@ -438,7 +438,73 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x7B2C;1&#x8282;&#xFF1A;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;">&#x7B2C;1&#x8282;&#xFF1A;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;</h1>
+<h3 id="&#x5982;&#x4F55;&#x5904;&#x7406;&#x8017;&#x65F6;&#x7684;&#x64CD;&#x4F5C;-&#x4E0D;&#x540C;&#x8BED;&#x8A00;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;">&#x5982;&#x4F55;&#x5904;&#x7406;&#x8017;&#x65F6;&#x7684;&#x64CD;&#x4F5C;? &#x4E0D;&#x540C;&#x8BED;&#x8A00;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;</h3>
+<ul>
+<li><p>&#x591A;&#x7EBF;&#x7A0B;&#x3002;&#x6BD4;&#x5982; Java&#x3001;C++&#xFF0C;&#x5C31;&#x662F;&#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7EBF;&#x7A0B;&#xFF0C;&#x5C06;&#x8017;&#x65F6;&#x64CD;&#x4F5C;&#x653E;&#x5728;&#x65B0;&#x7684;&#x7EBF;&#x7A0B;&#x91CC;&#x9762;&#x5904;&#x7406;&#xFF0C;&#x518D;&#x901A;&#x8FC7;&#x7EBF;&#x7A0B;&#x95F4;&#x901A;&#x4FE1;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5C06;&#x62FF;&#x5230;&#x7684;&#x6570;&#x636E;&#x4F20;&#x7ED9;&#x4E3B;&#x7EBF;&#x7A0B;&#x5904;&#x7406;&#x3002;</p>
+</li>
+<li><p>&#x5355;&#x7EBF;&#x7A0B;+&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x3002;&#x6BD4;&#x5982; JavaScript&#x3001;Dart &#x90FD;&#x662F;&#x4E3B;&#x8981;&#x57FA;&#x4E8E;&#x5355;&#x7EBF;&#x7A0B;&#x52A0;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x6765;&#x5B8C;&#x6210;&#x8017;&#x65F6;&#x64CD;&#x4F5C;&#x7684;&#x5904;&#x7406;</p>
+</li>
+<li><p>dart&#x7684;&#x591A;&#x7EBF;&#x7A0B;&#x5BF9;&#x5E94;&#x591A;isolate(isolate&#x7684;&#x663E;&#x793A;&#x8C03;&#x7528;&#x548C;&#x9690;&#x5F0F;&#x8C03;&#x7528;)</p>
+</li>
+</ul>
+<h5 id="&#x9690;&#x5F0F;&#x8C03;&#x7528;">&#x9690;&#x5F0F;&#x8C03;&#x7528;</h5>
+<pre><code>int expensiveOperation(int value) {
+  // &#x6267;&#x884C;&#x4E00;&#x4E9B;&#x8BA1;&#x7B97;&#x5BC6;&#x96C6;&#x578B;&#x7684;&#x4EFB;&#x52A1;
+  return value * value;
+}
 
+Future&lt;void&gt; main() async {
+  // &#x5728;&#x540E;&#x53F0;Isolate&#x4E2D;&#x6267;&#x884C;expensiveOperation&#x51FD;&#x6570;
+  int result = await compute(expensiveOperation, 10);
+
+  // &#x5904;&#x7406;&#x7ED3;&#x679C;
+  print(&apos;Result: $result&apos;);
+}
+</code></pre><h5 id="&#x663E;&#x5F0F;&#x8C03;&#x7528;">&#x663E;&#x5F0F;&#x8C03;&#x7528;</h5>
+<pre><code>import &apos;dart:isolate&apos;;
+
+void task1(SendPort sendPort) {
+  // &#x5728;&#x8FD9;&#x91CC;&#x6267;&#x884C;&#x4EFB;&#x52A1;1
+  int result = 0;
+  for (int i = 0; i &lt; 5; i++) {
+    result += i;
+  }
+
+  // &#x5C06;&#x7ED3;&#x679C;&#x53D1;&#x9001;&#x56DE;&#x4E3B;Isolate
+  sendPort.send(result);
+}
+
+void task2(SendPort sendPort) {
+  // &#x5728;&#x8FD9;&#x91CC;&#x6267;&#x884C;&#x4EFB;&#x52A1;2
+  int result = 0;
+  for (int i = 0; i &lt; 10; i++) {
+    result -= i;
+  }
+
+  // &#x5C06;&#x7ED3;&#x679C;&#x53D1;&#x9001;&#x56DE;&#x4E3B;Isolate
+  sendPort.send(result);
+}
+
+Future&lt;void&gt; main() async {
+  ReceivePort receivePort1 = ReceivePort();
+  ReceivePort receivePort2 = ReceivePort();
+
+  // &#x521B;&#x5EFA; Isolate &#x5E76;&#x5206;&#x522B;&#x5C06;&#x4EFB;&#x52A1;1&#x548C;&#x4EFB;&#x52A1;2&#x5206;&#x914D;&#x7ED9;&#x5B83;&#x4EEC;
+  Isolate isolate1 = await Isolate.spawn(task1, receivePort1.sendPort);
+  Isolate isolate2 = await Isolate.spawn(task2, receivePort2.sendPort);
+
+  // &#x7B49;&#x5F85; Isolate &#x8FD4;&#x56DE;&#x7ED3;&#x679C;
+  int result1 = await receivePort1.first;
+  int result2 = await receivePort2.first;
+
+  print(&apos;Result from Isolate 1: $result1&apos;);//Result from Isolate 1: 10
+  print(&apos;Result from Isolate 2: $result2&apos;);//Result from Isolate 2: -45
+
+  // &#x5173;&#x95ED; Isolate
+  isolate1.kill();
+  isolate2.kill();
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -481,7 +547,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第1节：线程模型","level":"1.4.1","depth":2,"next":{"title":"第2节：异步","level":"1.4.2","depth":2,"path":"Chapter3/async.md","ref":"Chapter3/async.md","articles":[]},"previous":{"title":"第三章 线程/isolate/异步","level":"1.4","depth":1,"path":"Chapter3/README.md","ref":"Chapter3/README.md","articles":[{"title":"第1节：线程模型","level":"1.4.1","depth":2,"path":"Chapter3/thread.md","ref":"Chapter3/thread.md","articles":[]},{"title":"第2节：异步","level":"1.4.2","depth":2,"path":"Chapter3/async.md","ref":"Chapter3/async.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter3/thread.md","mtime":"2023-09-28T11:37:23.439Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-01-02T08:51:45.868Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第1节：线程模型","level":"1.4.1","depth":2,"next":{"title":"第2节：异步","level":"1.4.2","depth":2,"path":"Chapter3/async.md","ref":"Chapter3/async.md","articles":[]},"previous":{"title":"第三章 线程/isolate/异步","level":"1.4","depth":1,"path":"Chapter3/README.md","ref":"Chapter3/README.md","articles":[{"title":"第1节：线程模型","level":"1.4.1","depth":2,"path":"Chapter3/thread.md","ref":"Chapter3/thread.md","articles":[]},{"title":"第2节：异步","level":"1.4.2","depth":2,"path":"Chapter3/async.md","ref":"Chapter3/async.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter3/thread.md","mtime":"2024-01-02T09:09:01.233Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-01-02T10:15:48.238Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

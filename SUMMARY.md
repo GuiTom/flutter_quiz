@@ -15,9 +15,10 @@
 * [第三章 线程/isolate/异步](Chapter3/README.md)
     * [第1节：线程模型](Chapter3/thread.md)
     * [第2节：异步](Chapter3/async.md)
-* [第四章 点击与手势](Chapter3/README.md)
-    * [第1节：点击测试](Chapter4/hit_test.md)
-    * [第2节：手势竞争](Chapter4/gensture_arena.md)
+* [第四章 用户交互时间处理机制](Chapter3/README.md)
+    * [第1节：命中测试](Chapter4/hit_test.md)
+    * [第2节：命中测试行为](Chapter4/hittest_behavior.md)
+    * [第3节：手势竞争](Chapter4/gensture_arena.md)
 * [第五章 生僻语法](Chapter5/README.md)
     * [第1节：yield](Chapter5/yield.md)
 

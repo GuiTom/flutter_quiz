@@ -64,12 +64,35 @@ Future<void> main() async {
 
 输出:
 
-A
-C
-E
-B
-D
-F
-G
-H
+A C E B D F G H
+
+### Completer
+
+在Flutter中，Completer是一个非常有用的工具，用于处理异步操作。它允许你在某个异步操作完成时手动发出信号，并且可以通过Future对象等待该信号。
+```
+import 'dart:async';
+
+void main() async{
+  // 创建一个Completer
+
+
+  // 模拟一个异步操作，比如网络请求
+  Completer simulateNetworkRequest()  {
+    Completer<String> completer = Completer();
+    Future.delayed(Duration(seconds: 2),(){
+      completer.complete('Operation completed successfully'); // 异步操作完成，发出完成信号
+    }); // 模拟一个2秒的延迟
+
+    return completer;
+  }
+  print("这一行一开始就打印");
+  // 启动异步操作
+ Completer completer = simulateNetworkRequest();
+  print("这一行紧接着上一个print打印");
+  // 等待异步操作完成
+  await completer.future;
+  print("这一行两秒后才打印");
+}
+
+```
 

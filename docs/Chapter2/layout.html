@@ -1,0 +1,543 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第2节：布局优化 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="offscreen.html" />
+    
+    
+    <link rel="prev" href="widet_build.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Chapter1/">
+            
+                <a href="../Chapter1/">
+            
+                    
+                    第一章 渲染流程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/tree.html">
+            
+                <a href="../Chapter1/tree.html">
+            
+                    
+                    第1节：三棵树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/pipeline.html">
+            
+                <a href="../Chapter1/pipeline.html">
+            
+                    
+                    第2节：渲染流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/key.html">
+            
+                <a href="../Chapter1/key.html">
+            
+                    
+                    第3节：key与复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二章 性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="widet_build.html">
+            
+                <a href="widet_build.html">
+            
+                    
+                    第1节：widget重建优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="layout.html">
+            
+                <a href="layout.html">
+            
+                    
+                    第2节：布局优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="offscreen.html">
+            
+                <a href="offscreen.html">
+            
+                    
+                    第3节：离屏渲染优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="image.html">
+            
+                <a href="image.html">
+            
+                    
+                    第4节：图片优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="repaintBoundary.html">
+            
+                <a href="repaintBoundary.html">
+            
+                    
+                    第5节：绘制边界优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="frame_seprate.html">
+            
+                <a href="frame_seprate.html">
+            
+                    
+                    第6节：分帧渲染优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Chapter3/">
+            
+                <a href="../Chapter3/">
+            
+                    
+                    第三章 线程/isolate/异步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/thread.html">
+            
+                <a href="../Chapter3/thread.html">
+            
+                    
+                    第1节：线程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/async.html">
+            
+                <a href="../Chapter3/async.html">
+            
+                    
+                    第2节：异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Chapter3/">
+            
+                <a href="../Chapter3/">
+            
+                    
+                    第四章 用户交互时间处理机制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/hit_test.html">
+            
+                <a href="../Chapter4/hit_test.html">
+            
+                    
+                    第1节：命中测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/hittest_behavior.html">
+            
+                <a href="../Chapter4/hittest_behavior.html">
+            
+                    
+                    第2节：命中测试行为
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/gensture_arena.html">
+            
+                <a href="../Chapter4/gensture_arena.html">
+            
+                    
+                    第3节：手势竞争
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter5/">
+            
+                <a href="../Chapter5/">
+            
+                    
+                    第五章 生僻语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/yield.html">
+            
+                <a href="../Chapter5/yield.html">
+            
+                    
+                    第1节：yield
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第2节：布局优化</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;2&#x8282;&#xFF1A;&#x5E03;&#x5C40;&#x4F18;&#x5316;">&#x7B2C;2&#x8282;&#xFF1A;&#x5E03;&#x5C40;&#x4F18;&#x5316;</h1>
+<h3 id="&#x5C3D;&#x91CF;&#x51CF;&#x5C11;&#x7531;&#x5185;&#x90E8;&#x64CD;&#x4F5C;&#x5F15;&#x8D77;&#x7684;&#x5E03;&#x5C40;&#x4F20;&#x9012;">&#x5C3D;&#x91CF;&#x51CF;&#x5C11;&#x7531;&#x5185;&#x90E8;&#x64CD;&#x4F5C;&#x5F15;&#x8D77;&#x7684;&#x5E03;&#x5C40;&#x4F20;&#x9012;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x7ECF;&#x5E38;&#x4F7F;&#x7528; Flutter &#x7F16;&#x7A0B;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x719F;&#x6089;&#x4E86;&#x5728;&#x521B;&#x5EFA; UI &#x65F6; <a href="https://flutter.cn/docs/ui/layout/constraints" target="_blank">&#x5E03;&#x5C40;&#x548C;&#x7EA6;&#x675F;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;</a>&#x3002;&#x4F60;&#x751A;&#x81F3;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x8BB0;&#x4F4F;&#x4E86; Flutter &#x7684;&#x57FA;&#x672C;&#x5E03;&#x5C40;&#x89C4;&#x5219;&#xFF1A;
+<strong>&#x9996;&#x5148;&#xFF0C;&#x4E0A;&#x5C42; widget &#x5411;&#x4E0B;&#x5C42; widget &#x4F20;&#x9012;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#xFF1B;</strong>
+<strong>&#x7136;&#x540E;&#xFF0C;&#x4E0B;&#x5C42; widget &#x5411;&#x4E0A;&#x5C42; widget &#x4F20;&#x9012;&#x5927;&#x5C0F;&#x4FE1;&#x606F;&#xFF1B;</strong>
+<strong>&#x6700;&#x540E;&#xFF0C;&#x4E0A;&#x5C42; widget &#x51B3;&#x5B9A;&#x4E0B;&#x5C42; widget &#x7684;&#x4F4D;&#x7F6E;&#x3002;</strong></p>
+<p>&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B; widget&#xFF0C;&#x7279;&#x522B;&#x662F;&#x7F51;&#x683C;&#x5217;&#x8868;&#x548C;&#x5217;&#x8868;&#xFF0C;&#x5E03;&#x5C40;&#x8FC7;&#x7A0B;&#x4E2D;&#x6027;&#x80FD;&#x4EE3;&#x4EF7;&#x5F88;&#x5927;&#x3002; Flutter &#x5C3D;&#x53EF;&#x80FD;&#x5728; widget &#x4E0A;&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x5E03;&#x5C40;&#x4F20;&#x9012;&#xFF0C;&#x4F46;&#x6709;&#x65F6;&#x9700;&#x8981;&#x518D;&#x6B21;&#x4F20;&#x9012;&#xFF08;&#x79F0;&#x4E3A; <strong>&#x5185;&#x90E8;&#x4F20;&#x9012;</strong>,<strong>&#x6216;&#x5411;&#x4E0A;&#x4F20;&#x9012;</strong>&#xFF09;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x4F1A;&#x964D;&#x4F4E;&#x6027;&#x80FD;&#x3002;</p>
+<h4 id="&#x4EC0;&#x4E48;&#x662F;&#x5185;&#x90E8;&#x4F20;&#x9012;&#xFF1F;">&#x4EC0;&#x4E48;&#x662F;&#x5185;&#x90E8;&#x4F20;&#x9012;&#xFF1F;</h4>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x4F60;&#x60F3;&#x8981;&#x6240;&#x6709;&#x5355;&#x5143;&#x683C;&#x90FD;&#x5177;&#x6709;&#x6216;&#x5927;&#x6216;&#x5C0F;&#x7684;&#x6548;&#x679C;&#xFF08;&#x6216;&#x7C7B;&#x4F3C;&#x9700;&#x8981;&#x8F6E;&#x8BE2;&#x6240;&#x6709;&#x5355;&#x5143;&#x683C;&#x7684;&#x8BA1;&#x7B97;&#xFF09;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x751F;&#x5185;&#x90E8;&#x4F20;&#x9012;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x8003;&#x8651;&#x4E00;&#x4E2A;&#x5927;&#x578B;&#x7684; <code>&#x5361;&#x7247;</code> &#x7F51;&#x683C;&#x5217;&#x8868;&#x65F6;&#x3002;&#x4E00;&#x4E2A;&#x7F51;&#x683C;&#x5217;&#x8868;&#x5E94;&#x8BE5;&#x6709;&#x7EDF;&#x4E00;&#x5927;&#x5C0F;&#x7684;&#x5355;&#x5143;&#x683C;&#xFF0C;&#x6240;&#x4EE5;&#x5E03;&#x5C40;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x4E86;&#x4E00;&#x6B21;&#x4F20;&#x9012;&#xFF0C;&#x4ECE;&#x7F51;&#x683C;&#x5217;&#x8868;&#x7684;&#x6839;&#x90E8;&#x5F00;&#x59CB;&#xFF08;&#x5728; widget &#x6811;&#x4E2D;&#xFF09;&#xFF0C;&#x8981;&#x6C42;&#x7F51;&#x683C;&#x5217;&#x8868;&#x4E2D;&#x7684; <strong>&#x6BCF;&#x4E2A;</strong> &#x5361;&#x7247;&#xFF08;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x53EF;&#x89C1;&#x7684;&#x5361;&#x7247;&#xFF09;&#x6765;&#x8FD4;&#x56DE; <strong>&#x5185;&#x90E8;</strong> &#x5C3A;&#x5BF8;&#x2014;&#x5047;&#x8BBE;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x9650;&#x5236;&#xFF0C;widget &#x66F4;&#x559C;&#x6B22;&#x8FD9;&#x6837;&#x7684;&#x5C3A;&#x5BF8;&#x3002;&#x6709;&#x4E86;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#xFF0C;&#x5E95;&#x5C42;&#x6846;&#x67B6;&#x5C31;&#x786E;&#x5B9A;&#x4E86;&#x4E00;&#x4E2A;&#x7EDF;&#x4E00;&#x7684;&#x5355;&#x5143;&#x683C;&#x5C3A;&#x5BF8;&#xFF0C;&#x5E76;&#x518D;&#x6B21;&#x91CD;&#x65B0;&#x8BBF;&#x95EE;&#x6240;&#x6709;&#x7684;&#x7F51;&#x683C;&#x5355;&#x5143;&#xFF0C;&#x544A;&#x8BC9;&#x6BCF;&#x4E2A;&#x5361;&#x7247;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x4EC0;&#x4E48;&#x5C3A;&#x5BF8;&#x3002;</p>
+<h4 id="&#x8C03;&#x8BD5;&#x5185;&#x90E8;&#x4F20;&#x9012;">&#x8C03;&#x8BD5;&#x5185;&#x90E8;&#x4F20;&#x9012;</h4>
+<p>&#x8981;&#x786E;&#x8BA4;&#x4F60;&#x662F;&#x5426;&#x6709;&#x8FC7;&#x591A;&#x7684;&#x5185;&#x90E8;&#x4F20;&#x9012;&#xFF0C;&#x8BF7;&#x5728; DevTools &#x4E2D;&#x542F;&#x7528; <strong><a href="https://flutter.cn/docs/tools/devtools/performance#track-layouts" target="_blank">&#x5E03;&#x5C40;&#x8DDF;&#x8E2A; (Track layouts option)</a></strong> &#xFF08;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x7981;&#x7528;&#x7684;&#xFF09;&#xFF0C;&#x5E76;&#x67E5;&#x770B;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684; <a href="https://flutter.cn/docs/tools/devtools/cpu-profiler#flame-chart" target="_blank">&#x5806;&#x6808;&#x8DDF;&#x8E2A; (stack trace)</a> &#x4EE5;&#x4E86;&#x89E3;&#x6267;&#x884C;&#x4E86;&#x591A;&#x5C11;&#x6B21;&#x5E03;&#x5C40;&#x4F20;&#x9012;&#x3002;&#x4E00;&#x65E6;&#x4F60;&#x542F;&#x7528;&#x8DDF;&#x8E2A;&#xFF0C;&#x5185;&#x90E8;&#x7684;&#x65F6;&#x95F4;&#x7EBF;&#x4E8B;&#x4EF6;&#x5C06;&#x88AB;&#x6807;&#x8BB0;&#x4E3A; &#x201C;$runtimeType intrinsics&#x201D;&#x3002;</p>
+<h4 id="&#x907F;&#x514D;&#x5185;&#x90E8;&#x4F20;&#x9012;">&#x907F;&#x514D;&#x5185;&#x90E8;&#x4F20;&#x9012;</h4>
+<p>&#x4F60;&#x6709;&#x51E0;&#x4E2A;&#x9009;&#x62E9;&#x6765;&#x907F;&#x514D;&#x5185;&#x90E8;&#x4F20;&#x9012;&#xFF1A;</p>
+<ul>
+<li>&#x5C06;&#x5355;&#x5143;&#x683C;&#x8BBE;&#x7F6E;&#x4E3A;&#x56FA;&#x5B9A;&#x5927;&#x5C0F;&#x3002;</li>
+<li>&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x5355;&#x5143;&#x683C;&#x4F5C;&#x4E3A; &#x201C;&#x951A;&#x201D; &#x2014;&#x6240;&#x6709;&#x5355;&#x5143;&#x683C;&#x7684;&#x5C3A;&#x5BF8;&#x90FD;&#x5C06;&#x76F8;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E2A;&#x5355;&#x5143;&#x683C;&#x3002;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x6E32;&#x67D3;&#x5BF9;&#x8C61;&#xFF0C;&#x9996;&#x5148;&#x5B9A;&#x4F4D;&#x5B50;&#x951A;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x5176;&#x5468;&#x56F4;&#x5E03;&#x7F6E;&#x5176;&#x4ED6;&#x5B50;&#x5355;&#x5143;&#x3002;</li>
+</ul>
+<h4 id="&#x5C0F;&#x6D4B;&#x9A8C;">&#x5C0F;&#x6D4B;&#x9A8C;</h4>
+<p>&#x5BF9;&#x4E8E;&#x4EE5;&#x4E0B;&#x4E24;&#x6BB5;&#x5217;&#x8868;&#x5E03;&#x5C40;&#x4EE3;&#x7801;&#xFF0C;&#x54EA;&#x4E00;&#x6BB5;&#x53D1;&#x751F;&#x4E86;&#x5185;&#x90E8;&#x4F20;&#x9012;?</p>
+<div style="display: flex;">
+<img src="assets/image-20230925112654036.png" width="552" height="230">
+<img src="assets/image-20230925112707609.png" width="552" height="293">
+</div>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="widet_build.html" class="navigation navigation-prev " aria-label="Previous page: 第1节：widget重建优化">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="offscreen.html" class="navigation navigation-next " aria-label="Next page: 第3节：离屏渲染优化">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第2节：布局优化","level":"1.3.2","depth":2,"next":{"title":"第3节：离屏渲染优化","level":"1.3.3","depth":2,"path":"Chapter2/offscreen.md","ref":"Chapter2/offscreen.md","articles":[]},"previous":{"title":"第1节：widget重建优化","level":"1.3.1","depth":2,"path":"Chapter2/widet_build.md","ref":"Chapter2/widet_build.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter2/layout.md","mtime":"2024-03-14T08:34:20.654Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-15T02:30:34.263Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

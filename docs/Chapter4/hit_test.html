@@ -1,0 +1,542 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第1节：命中测试 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="hittest_behavior.html" />
+    
+    
+    <link rel="prev" href="../Chapter3/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Chapter1/">
+            
+                <a href="../Chapter1/">
+            
+                    
+                    第一章 渲染流程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/tree.html">
+            
+                <a href="../Chapter1/tree.html">
+            
+                    
+                    第1节：三棵树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/pipeline.html">
+            
+                <a href="../Chapter1/pipeline.html">
+            
+                    
+                    第2节：渲染流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/key.html">
+            
+                <a href="../Chapter1/key.html">
+            
+                    
+                    第3节：key与复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Chapter2/">
+            
+                <a href="../Chapter2/">
+            
+                    
+                    第二章 性能优化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/widet_build.html">
+            
+                <a href="../Chapter2/widet_build.html">
+            
+                    
+                    第1节：widget重建优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/layout.html">
+            
+                <a href="../Chapter2/layout.html">
+            
+                    
+                    第2节：布局优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/offscreen.html">
+            
+                <a href="../Chapter2/offscreen.html">
+            
+                    
+                    第3节：离屏渲染优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Chapter2/image.html">
+            
+                <a href="../Chapter2/image.html">
+            
+                    
+                    第4节：图片优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Chapter2/repaintBoundary.html">
+            
+                <a href="../Chapter2/repaintBoundary.html">
+            
+                    
+                    第5节：绘制边界优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Chapter2/frame_seprate.html">
+            
+                <a href="../Chapter2/frame_seprate.html">
+            
+                    
+                    第6节：分帧渲染优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Chapter3/">
+            
+                <a href="../Chapter3/">
+            
+                    
+                    第三章 线程/isolate/异步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/thread.html">
+            
+                <a href="../Chapter3/thread.html">
+            
+                    
+                    第1节：线程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/async.html">
+            
+                <a href="../Chapter3/async.html">
+            
+                    
+                    第2节：异步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Chapter3/">
+            
+                <a href="../Chapter3/">
+            
+                    
+                    第四章 用户交互时间处理机制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="hit_test.html">
+            
+                <a href="hit_test.html">
+            
+                    
+                    第1节：命中测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="hittest_behavior.html">
+            
+                <a href="hittest_behavior.html">
+            
+                    
+                    第2节：命中测试行为
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="gensture_arena.html">
+            
+                <a href="gensture_arena.html">
+            
+                    
+                    第3节：手势竞争
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter5/">
+            
+                <a href="../Chapter5/">
+            
+                    
+                    第五章 生僻语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/yield.html">
+            
+                <a href="../Chapter5/yield.html">
+            
+                    
+                    第1节：yield
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第1节：命中测试</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;1&#x8282;&#xFF1A;&#x70B9;&#x51FB;&#x6D4B;&#x8BD5;">&#x7B2C;1&#x8282;&#xFF1A;&#x70B9;&#x51FB;&#x6D4B;&#x8BD5;</h1>
+<h3 id="1-&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#x7684;&#x8D77;&#x70B9;">1. &#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#x7684;&#x8D77;&#x70B9;</h3>
+<p>&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;&#xFF0C;&#x53D6;&#x51B3;&#x4E8E;&#x5728;&#x5176;&#x5BF9;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#x8FC7;&#x7A0B;&#x4E2D;&#x662F;&#x5426;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x4E86; HitTestResult &#x5217;&#x8868; &#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x88AB;&#x6DFB;&#x52A0;&#x8FDB;&#x53BB;&#xFF0C;&#x5219;&#x540E;&#x7EED;&#x7684;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5C06;&#x4E0D;&#x4F1A;&#x5206;&#x53D1;&#x7ED9;&#x81EA;&#x5DF1;&#x3002;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#x7684;&#x8FC7;&#x7A0B;&#xFF1A;&#x5F53;&#x53D1;&#x751F;&#x7528;&#x6237;&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;Flutter &#x4F1A;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#xFF08;<code>RenderView</code>&#xFF09;&#x5F00;&#x59CB;&#x8C03;&#x7528;&#x5B83;<code>hitTest()</code></p>
+<pre><code>@override
+void hitTest(HitTestResult result, Offset position) {
+  //&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5F00;&#x59CB;&#x8FDB;&#x884C;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;
+  renderView.hitTest(result, position: position); 
+  // &#x4F1A;&#x8C03;&#x7528; GestureBinding &#x4E2D;&#x7684; hitTest()&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#x4ECB;&#x7ECD;&#x3002;
+  super.hitTest(result, position); 
+}
+</code></pre><p>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A; renderView &#x662F; RenderView &#x5BF9;&#x5E94;&#x7684; RenderObject &#x5BF9;&#x8C61;&#xFF0C; RenderObject &#x5BF9;&#x8C61;&#x7684; hitTest &#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x662F;&#xFF1A;&#x4ECE;&#x8BE5;&#x8282;&#x70B9;&#x51FA;&#x53D1;&#xFF0C;&#x6309;&#x7167;&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x7684;&#x987A;&#x5E8F;&#x9012;&#x5F52;&#x904D;&#x5386;&#x5B50;&#x6811;&#xFF08;&#x6E32;&#x67D3;&#x6811;&#xFF09;&#x4E0A;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5E76;&#x5BF9;&#x5B83;&#x4EEC;&#x8FDB;&#x884C;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#x3002;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x79F0;&#x4E3A;&#x201C;&#x6E32;&#x67D3;&#x6811;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#x201D;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A;&#x6E32;&#x67D3;&#x6811;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x4F1A;&#x8C03;&#x7528; GestureBinding &#x7684; hitTest &#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x624B;&#x52BF;&#x3002;</p>
+<h3 id="2&#x6E32;&#x67D3;&#x6811;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#x8FC7;&#x7A0B;">2.&#x6E32;&#x67D3;&#x6811;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#x8FC7;&#x7A0B;</h3>
+<p>&#x6E32;&#x67D3;&#x6811;&#x7684;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#x6D41;&#x7A0B;&#x5C31;&#x662F;&#x7236;&#x8282;&#x70B9; hitTest &#x65B9;&#x6CD5;&#x4E2D;&#x4E0D;&#x65AD;&#x8C03;&#x7528;&#x5B50;&#x8282;&#x70B9; hitTest &#x65B9;&#x6CD5;&#x7684;&#x9012;&#x5F52;&#x8FC7;&#x7A0B;&#x3002;&#x4E0B;&#x9762;&#x662F;<code>RenderView</code>&#x7684;<code>hitTest()</code>&#x6E90;&#x7801;&#xFF1A;</p>
+<pre><code>// &#x53D1;&#x8D77;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#xFF0C;position &#x4E3A;&#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x7684;&#x5750;&#x6807;&#xFF08;&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;&#xFF09;&#x3002;
+bool hitTest(HitTestResult result, { Offset position }) {
+  if (child != null)
+    child.hitTest(result, position: position); //&#x9012;&#x5F52;&#x5BF9;&#x5B50;&#x6811;&#x8FDB;&#x884C;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;
+  //&#x6839;&#x8282;&#x70B9;&#x4F1A;&#x59CB;&#x7EC8;&#x88AB;&#x6DFB;&#x52A0;&#x5230;HitTestResult&#x5217;&#x8868;&#x4E2D;
+  result.add(HitTestEntry(this)); 
+  return true;
+}
+</code></pre><p>&#x56E0;&#x4E3A; RenderView &#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5B69;&#x5B50;&#xFF0C;&#x6240;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;child.hitTest &#x5373;&#x53EF;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6E32;&#x67D3;&#x5BF9;&#x8C61;&#x6709;&#x591A;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5219;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#x903B;&#x8F91;&#x4E3A;&#xFF1A;&#x5982;&#x679C;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#x901A;&#x8FC7;&#x4E86;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#x6216;&#x8005;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x201C;&#x5F3A;&#x884C;&#x58F0;&#x660E;&#x201D;&#x81EA;&#x5DF1;&#x901A;&#x8FC7;&#x4E86;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#xFF0C;&#x5219;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x4F1A;&#x901A;&#x8FC7;&#x547D;&#x4E2D;&#x6D4B;&#x8BD5;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Chapter3/" class="navigation navigation-prev " aria-label="Previous page: 第四章 用户交互时间处理机制">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="hittest_behavior.html" class="navigation navigation-next " aria-label="Next page: 第2节：命中测试行为">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第1节：命中测试","level":"1.5.1","depth":2,"next":{"title":"第2节：命中测试行为","level":"1.5.2","depth":2,"path":"Chapter4/hittest_behavior.md","ref":"Chapter4/hittest_behavior.md","articles":[]},"previous":{"title":"第四章 用户交互时间处理机制","level":"1.5","depth":1,"path":"Chapter3/README.md","ref":"Chapter3/README.md","articles":[{"title":"第1节：命中测试","level":"1.5.1","depth":2,"path":"Chapter4/hit_test.md","ref":"Chapter4/hit_test.md","articles":[]},{"title":"第2节：命中测试行为","level":"1.5.2","depth":2,"path":"Chapter4/hittest_behavior.md","ref":"Chapter4/hittest_behavior.md","articles":[]},{"title":"第3节：手势竞争","level":"1.5.3","depth":2,"path":"Chapter4/gensture_arena.md","ref":"Chapter4/gensture_arena.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter4/hit_test.md","mtime":"2024-03-14T10:19:20.997Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-15T02:30:34.263Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

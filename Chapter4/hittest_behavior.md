@@ -18,3 +18,35 @@ enum HitTestBehavior {
   // 组件必然会通过命中测试，但其 hitTest 返回值可能为 true 也可能为 false
   translucent,
 }
+
+~~~
+
+### 例子 
+
+当给 `Container`设置颜色的时候，点击有响应。而去掉颜色，则点击无响应。若去掉颜色而加上behavior: HitTestBehavior.opaque,则点击也有相应。
+
+~~~
+//无响应
+GestureDetector(
+                  onTap: () {
+                    print("onTap");
+                  },
+                  child: Container(
+                    //color: Colors.blue,打开
+                    width: 40,
+                    height: 40,
+                  ),
+                ),
+~~~
+
+
+
+
+
+### 参考:
+
+1.[Flutter : 关于 HitTestBehavior_flutter hittestbehavior-CSDN博客](https://blog.csdn.net/u013066292/article/details/1172840
+
+[85)
+
+2.[8.3 Flutter事件机制 | 《Flutter实战·第二版》 (flutterchina.club)](https://book.flutterchina.club/chapter8/hittest.html#_8-3-5-hittestbehavior)
